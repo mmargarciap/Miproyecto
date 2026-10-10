@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Proyecto</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --primary: #38bdf8;
+        --primary-dark: #0ea5e9;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --accent: #a78bfa;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #020817, var(--bg));
+        color: var(--text);
+      }
+
+      .container {
+        width: min(1100px, 90%);
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 24px 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links a {
+        color: var(--text);
+        text-decoration: none;
+        opacity: 0.8;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: center;
+        gap: 40px;
+        padding: 60px 0 80px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1.1;
+        margin: 0 0 18px;
+      }
+
+      .hero p {
+        color: var(--muted);
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 28px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 22px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.2s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: #08111d;
+      }
+
+      .btn-secondary {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: var(--text);
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .card {
+        background: rgba(17, 24, 39, 0.88);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.45);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        gap: 18px;
+        margin-top: 26px;
+      }
+
+      .stat {
+        background: rgba(15, 23, 42, 0.7);
+        border-radius: 14px;
+        padding: 18px;
+        border: 1px solid rgba(148, 163, 184, 0.15);
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+      }
+
+      .stat span {
+        color: var(--muted);
+      }
+
+      .section {
+        padding: 30px 0 80px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 24px;
+      }
+
+      .feature {
+        background: rgba(17, 24, 39, 0.76);
+        border: 1px solid rgba(148, 163, 184, 0.14);
+        border-radius: 18px;
+        padding: 24px;
+      }
+
+      .feature h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+
+      .feature p {
+        color: var(--muted);
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      footer {
+        border-top: 1px solid rgba(148, 163, 184, 0.14);
+        padding: 22px 0 40px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 760px) {
+        .hero, .features {
+          grid-template-columns: 1fr;
+        }
+
+        nav {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">MiProyecto</div>
+          <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero" id="inicio">
+        <div>
+          <h1>Diseña ideas que impacten.</h1>
+          <p>
+            Creamos experiencias digitales modernas, rápidas y funcionales para
+            ayudarte a destacar en el mercado con una presencia sólida y clara.
+          </p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#servicios">Ver servicios</a>
+            <a class="btn btn-secondary" href="#contacto">Hablemos</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Resumen</h2>
+          <div class="stats">
+            <div class="stat">
+              <strong>120+</strong>
+              <span>Proyectos</span>
+            </div>
+            <div class="stat">
+              <strong>4.9/5</strong>
+              <span>Calificación</span>
+            </div>
+            <div class="stat">
+              <strong>18k</strong>
+              <span>Seguidores</span>
+            </div>
+            <div class="stat">
+              <strong>96%</strong>
+              <span>Satisfacción</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="servicios">
+        <h2>¿Qué ofrecemos?</h2>
+        <div class="features">
+          <article class="feature">
+            <h3>Diseño web</h3>
+            <p>
+              Interfaces limpias, modernas y centradas en la experiencia del usuario.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Desarrollo</h3>
+            <p>
+              Soluciones funcionales y escalables para proyectos personales o empresariales.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Marketing</h3>
+            <p>
+              Estrategias para atraer, convertir y retener clientes con mensajes claros.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto">
+      © 2026 MiProyecto · hola@miproyecto.com
+    </footer>
+  </body>
+</html>
